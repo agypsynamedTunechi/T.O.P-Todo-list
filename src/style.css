@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    /* width: 100%; */
+}
+
+.project-container{
+    flex: 1;
+}
+
+.todo-container{
+    flex: 3;
+}
