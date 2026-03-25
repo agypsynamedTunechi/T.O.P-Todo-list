@@ -1,5 +1,7 @@
 import "./style.css"
 import * as logic from "./logic.js"
+import {Display} from "./dom.js"
+import {DisplayProject} from "./dom.js"
 
 const default1 = new logic.Project("man");
 console.log(default1)
@@ -14,3 +16,5 @@ console.log(default1)
 
 default1.removeTodo(0)
 console.log(default1)
+
+Display()
