@@ -143,3 +143,36 @@ button{
     margin-top: 1rem;
 }
 
+dialog{
+    border: none;
+  border-radius: 10px;
+  background-color: #2196F3;
+  top: 50%; 
+  left: 12%;
+  transform: translate(-50%, -50%)
+}
+
+#project-dialog form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 1rem;
+}
+
+.project-form-button{
+    display: flex;
+    gap: 2rem;
+}
+
+.project-form-button button{
+    border: 1px solid black;
+    padding: .4rem;
+}
+
+form input{
+    width: 200px;
+  padding: .5rem;
+}
+

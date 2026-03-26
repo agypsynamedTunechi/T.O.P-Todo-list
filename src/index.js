@@ -1,20 +1,32 @@
 import "./style.css"
 import * as logic from "./logic.js"
-import {Display} from "./dom.js"
-import {DisplayProject} from "./dom.js"
+import {Display, projectDialog} from "./dom.js"
+import {DisplayProject} from "./projectUi.js"
+import { DisplayTodo} from "./todoUi.js"
 
-const default1 = new logic.Project("man");
-console.log(default1)
-const  todo1 = new logic.Todo("watch tv", "get home quickly to watch AOT", " Today", "Urgent")
-const  todo2 = new logic.Todo("watch anime", "get home quickly to watch AOT", " Today", "Urgent")
-const  todo3 = new logic.Todo("listen to music", "get home quickly to watch AOT", " Today", "Urgent")
 
-default1.addTodo(todo1)
-default1.addTodo(todo2)
-default1.addTodo(todo3)
-console.log(default1)
+const main = document.querySelector("#content");
+const projectTitleInput = document.querySelector("input");
+const addBtn = document.querySelector(".add-btn")
+const projects = [];
 
-default1.removeTodo(0)
-console.log(default1)
 
 Display()
+
+projectDialog.addEventListener("close", ()=>{
+    const project = new logic.Project(projectTitleInput.value);
+    DisplayProject(projectTitleInput.value)
+    projects.push(project)
+    console.log(projects)
+})
+
+addBtn.addEventListener("click", (event)=>{
+    event.preventDefault();
+    projectDialog.close();
+     
+})
+
+console.log(projects)
+
+
+

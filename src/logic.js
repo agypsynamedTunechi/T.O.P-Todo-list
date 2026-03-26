@@ -2,6 +2,7 @@ export class Project{
     constructor(title){
         this.title = title;
         this.todos = [];
+        this.uuid = crypto.randomUUID();
     }
 
     addTodo(todo){
@@ -21,3 +22,4 @@ export class Todo{
         this.priority = priority;
     }
 }
+
